@@ -27,7 +27,7 @@ def pixel():
     with open("log.json", "w") as f:
         json.dump(data, f, indent=4)
 
-    return send_file("pixil-frame-0.png", mimetype="image/png")
+    return send_file("pixel.png", mimetype="image/png")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
