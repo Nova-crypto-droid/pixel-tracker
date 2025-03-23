@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/pixel")
 def pixel():
-    ip = request.remote_addr
+    ip = get_real_ip()
     ua = request.headers.get('User-Agent', 'Unknown')
     timestamp = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
 
